@@ -1,8 +1,6 @@
 import 'package:be_smart_app/view/screens/account/account_screen.dart';
 import 'package:be_smart_app/view/screens/home_screen/home_screen_widget.dart';
 import 'package:be_smart_app/view/screens/my_progress/my_progress_screen.dart';
-import 'package:be_smart_app/view/screens/sign_in/sign_in_screen.dart';
-import 'package:be_smart_app/view/widget/list_progress.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
