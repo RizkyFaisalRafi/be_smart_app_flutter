@@ -1,3 +1,4 @@
+import 'package:be_smart_app/view/screens/on_boarding/on_boarding.dart';
 import 'package:be_smart_app/view/screens/sign_in/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const SignInScreen(),
+      home: const OnBoarding(),
     );
   }
 }

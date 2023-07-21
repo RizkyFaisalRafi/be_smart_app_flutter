@@ -35,13 +35,26 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  # FlutterNativeSplash for SplashScreen
   flutter_native_splash: ^2.3.1
+  # VideoPlayer
   video_player: ^2.7.0
+  # IntroductionScreen for OnBoarding
   introduction_screen: ^3.1.9
+  # GoogleFonts for fonts internet
   google_fonts: ^5.1.0
+  # Icon-Icon Iconify
   iconify_flutter: ^0.0.5
+  # CarouselSlider for Slider Hero
   carousel_slider: ^4.2.1
+  # SmoothPageIndicator for slider Hero
   smooth_page_indicator: ^1.1.0
+  # PercentIndicator for Bar Percent
+  percent_indicator: ^4.2.3
+  # Membuka Link external ataupun app external 
+  url_launcher: ^6.1.12
+  # Dialog Awesome can animation Icon in AwesomeDialog
+  awesome_dialog: ^3.1.0
 
 flutter_native_splash:
   android: true

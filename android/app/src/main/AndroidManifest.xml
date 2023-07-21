@@ -30,4 +30,28 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+
+    <!-- Url Lancher Configuration -->
+    <queries>
+
+    <!-- If your app checks for call -->
+    <intent>
+        <action android:name="android.intent.action.VIEW" />
+        <data android:scheme="tel" />
+    </intent>
+    
+    <!-- If your app checks for Whatsapp -->
+    <intent>
+        <action android:name="android.intent.action.VIEW" />
+        <data android:scheme="https" />
+    </intent> 
+
+    <!-- If your app checks for Email -->
+    <intent>
+        <action android:name="android.intent.action.VIEW" />
+        <data android:scheme="mailto" />
+    </intent>
+
+    </queries>
+
 </manifest>

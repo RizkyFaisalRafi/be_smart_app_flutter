@@ -15,7 +15,7 @@ class OnBoarding extends StatelessWidget {
     );
 
     return IntroductionScreen(
-      globalBackgroundColor: const Color(0XFFDEFEBB),
+      globalBackgroundColor: Colors.white,
       pages: [
         // Screen 1
         PageViewModel(
@@ -24,7 +24,7 @@ class OnBoarding extends StatelessWidget {
             style: GoogleFonts.poppins(
               fontSize: 24,
               fontWeight: bold,
-              color: const Color(0xff506835),
+              color: Colors.black,
             ),
             textAlign: TextAlign.center,
           ),
@@ -33,7 +33,7 @@ class OnBoarding extends StatelessWidget {
             style: GoogleFonts.poppins(
               fontSize: 15,
               fontWeight: reguler,
-              color: blackColor,
+              color: const Color(0xff666666),
             ),
             textAlign: TextAlign.center,
           ),
@@ -57,7 +57,7 @@ class OnBoarding extends StatelessWidget {
             style: GoogleFonts.poppins(
               fontSize: 24,
               fontWeight: bold,
-              color: const Color(0xff506835),
+              color: Colors.black,
             ),
             textAlign: TextAlign.center,
           ),
@@ -66,7 +66,7 @@ class OnBoarding extends StatelessWidget {
             style: GoogleFonts.poppins(
               fontSize: 15,
               fontWeight: reguler,
-              color: blackColor,
+              color: const Color(0xff666666),
             ),
             textAlign: TextAlign.center,
           ),
@@ -90,7 +90,7 @@ class OnBoarding extends StatelessWidget {
             style: GoogleFonts.poppins(
               fontSize: 24,
               fontWeight: bold,
-              color: const Color(0xff506835),
+              color: Colors.black,
             ),
             textAlign: TextAlign.center,
           ),
@@ -99,7 +99,7 @@ class OnBoarding extends StatelessWidget {
             style: GoogleFonts.poppins(
               fontSize: 15,
               fontWeight: reguler,
-              color: blackColor,
+              color: const Color(0xff666666),
             ),
             textAlign: TextAlign.center,
           ),
@@ -131,10 +131,10 @@ class OnBoarding extends StatelessWidget {
                 },
                 style: TextButton.styleFrom(
                   side: const BorderSide(
-                    color: Color(0XFF7CA153),
+                    color: Color(0XFF004AAD),
                     width: 2.0,
                   ),
-                  backgroundColor: const Color(0XFF7CA153),
+                  backgroundColor: const Color(0XFF004AAD),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -165,12 +165,12 @@ class OnBoarding extends StatelessWidget {
       showDoneButton: false,
       showBackButton: false,
       back: const Icon(Icons.arrow_back),
-      skip: Image.asset('assets/icons/skip_button.png'),
-      next: Image.asset('assets/icons/next_button.png'),
+      skip: Image.asset('assets/images/skip.png'),
+      next: Image.asset('assets/images/next.png'),
       dotsDecorator: DotsDecorator(
         size: const Size(10, 10),
         color: greyColor,
-        activeColor: const Color(0XFF2D6248),
+        activeColor: const Color(0XFF004AAD),
         activeSize: const Size(20, 10),
         activeShape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(20)),
