@@ -53,6 +53,38 @@ class OnBoarding extends StatelessWidget {
         // Screen 2
         PageViewModel(
           titleWidget: Text(
+            'Product',
+            style: GoogleFonts.poppins(
+              fontSize: 24,
+              fontWeight: bold,
+              color: Colors.black,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          bodyWidget: Text(
+            'Menjual barang yang berkualitas dengan harga miring namun kualitas bintang 5.',
+            style: GoogleFonts.poppins(
+              fontSize: 15,
+              fontWeight: reguler,
+              color: const Color(0xff666666),
+            ),
+            textAlign: TextAlign.center,
+          ),
+          image: Image.asset(
+            'assets/images/be_smart_logo.png',
+            width: 350,
+            height: 250,
+          ),
+          decoration: pageDecoration.copyWith(
+            imageFlex: 10,
+            bodyFlex: 10,
+            safeArea: 0,
+            contentMargin: const EdgeInsets.all(25),
+          ),
+        ),
+
+        PageViewModel(
+          titleWidget: Text(
             'Learning',
             style: GoogleFonts.poppins(
               fontSize: 24,
