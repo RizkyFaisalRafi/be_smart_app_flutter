@@ -13,7 +13,7 @@ class MobileMaterialListScreen extends StatelessWidget {
         title: const Text('List Materi Mobile'),
         centerTitle: true,
       ),
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         // color: const Color(0xffF1F1F1),
         child: Padding(
@@ -29,7 +29,7 @@ class MobileMaterialListScreen extends StatelessWidget {
                 ),
                 const ListProgress(),
 
-                SizedBox(
+                const SizedBox(
                   height: 12,
                 ),
 

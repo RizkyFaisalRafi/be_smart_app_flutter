@@ -34,7 +34,7 @@ class ListProgress extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 width: double.infinity,
                 height: 106,
                 // color: Colors.amber,

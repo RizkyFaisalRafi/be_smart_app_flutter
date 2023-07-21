@@ -528,7 +528,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                         scrollDirection: Axis.vertical,
                         shrinkWrap: true,
                         children: [
-                          Container(
+                          SizedBox(
                             height: 150,
                             child: Card(
                               child: Row(
