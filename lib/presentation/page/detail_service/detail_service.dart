@@ -222,6 +222,9 @@ class DetailService extends StatelessWidget {
                                   ),
                                 ),
                               ),
+
+
+                              // 
                               // 2
                               Tab(
                                 child: Text(
