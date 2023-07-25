@@ -1,15 +1,15 @@
 import 'package:be_smart_app/util/theme.dart';
-import 'package:be_smart_app/view/widget/list_progress.dart';
+import 'package:be_smart_app/util/widget/list_progress.dart';
 import 'package:flutter/material.dart';
 
-class UiUxMaterialListScreen extends StatelessWidget {
-  const UiUxMaterialListScreen({super.key});
+class WebMaterialListScreen extends StatelessWidget {
+  const WebMaterialListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('List Materi UI/UX'),
+        title: const Text('List Materi Web'),
         centerTitle: true,
       ),
       body: SizedBox(

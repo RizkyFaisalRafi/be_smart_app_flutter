@@ -1,12 +1,47 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../util/theme.dart';
+import '../home_screen/home_screen.dart';
 import '../sign_in/sign_in_screen.dart';
 
-class OnBoarding extends StatelessWidget {
+class OnBoarding extends StatefulWidget {
   const OnBoarding({super.key});
+
+  @override
+  State<OnBoarding> createState() => _OnBoardingState();
+}
+
+class _OnBoardingState extends State<OnBoarding> {
+  // initState pertama kali dijalankan akan mengecek onBoarding
+  @override
+  void initState() {
+    checkOnBoarding();
+    super.initState();
+  }
+
+  // Cek OnBoarding Sudah ditampilkan/belum pertama app diinstal
+  Future<void> checkOnBoarding() async {
+    // menyimpan nilai ke dalam shared preferences
+    SharedPreferences logindata = await SharedPreferences.getInstance();
+    final bool finishOnBoarding = logindata.containsKey('completed');
+
+    // Apabila sudah ditampilkan maka onBoarding tidak akan tampil lagi
+    if (finishOnBoarding && context.mounted) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const HomeScreen()),
+      );
+    }
+  }
+
+  // Set samain Keynya
+  void setOnBoardingCompleted() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    await preferences.setBool('completed', true);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -83,6 +118,7 @@ class OnBoarding extends StatelessWidget {
           ),
         ),
 
+        // Screen 3
         PageViewModel(
           titleWidget: Text(
             'Learning',
@@ -115,7 +151,7 @@ class OnBoarding extends StatelessWidget {
           ),
         ),
 
-        // Screen 3
+        // Screen 4
         PageViewModel(
           titleWidget: Text(
             'Service',
@@ -154,6 +190,8 @@ class OnBoarding extends StatelessWidget {
               height: 50,
               child: TextButton(
                 onPressed: () {
+                  setOnBoardingCompleted();
+
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
@@ -185,6 +223,8 @@ class OnBoarding extends StatelessWidget {
         ),
       ],
       onDone: () {
+        setOnBoardingCompleted();
+        checkOnBoarding();
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(

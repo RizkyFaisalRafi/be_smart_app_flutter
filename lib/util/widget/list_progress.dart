@@ -2,12 +2,20 @@ import 'package:be_smart_app/util/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
+import '../../presentation/page/contents_of_mobile_material/content_mobile_material.dart';
+
 class ListProgress extends StatelessWidget {
   const ListProgress({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return InkWell(
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => ContentMobileMaterial(),
+        ),
+      ),
       child: Card(
         color: Colors.white,
         child: Row(

@@ -1,12 +1,14 @@
 import 'package:be_smart_app/util/theme.dart';
-import 'package:be_smart_app/view/screens/languages_material_list/languages_material_list_screen.dart';
-import 'package:be_smart_app/view/screens/mobile_material_list/mobile_material_list_screen.dart';
-import 'package:be_smart_app/view/screens/ui_ux_material_list/ui_ux_material_list_screen.dart';
-import 'package:be_smart_app/view/screens/web_material_list/web_material_list_screen.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+import '../languages_material_list/languages_material_list_screen.dart';
+import '../mobile_material_list/mobile_material_list_screen.dart';
+import '../product/home_product.dart';
+import '../ui_ux_material_list/ui_ux_material_list_screen.dart';
+import '../web_material_list/web_material_list_screen.dart';
 
 class HomeScreenWidget extends StatefulWidget {
   const HomeScreenWidget({super.key});
@@ -119,6 +121,11 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                               onTap: () {
                                 if (index == 0) {
                                   // Navigasi ke Product Electronic & Aksesoris
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => HomeProduct()),
+                                  );
                                 } else if (index == 1) {
                                   // Navigasi ke Product Pakaian
                                 } else if (index == 2) {

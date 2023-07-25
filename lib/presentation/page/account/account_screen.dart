@@ -1,11 +1,11 @@
 import 'package:be_smart_app/util/theme.dart';
-import 'package:be_smart_app/view/screens/about_screen/about_screen.dart';
-import 'package:be_smart_app/view/screens/call_dev/call_dev_screen.dart';
-import 'package:be_smart_app/view/screens/portofolio/portofolio_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 
-import '../../widget/menu_profile.dart';
+import '../../../util/widget/menu_profile.dart';
+import '../about_screen/about_screen.dart';
+import '../call_dev/call_dev_screen.dart';
+import '../portofolio/portofolio_screen.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({super.key});

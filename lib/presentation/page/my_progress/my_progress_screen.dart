@@ -1,5 +1,5 @@
 import 'package:be_smart_app/util/theme.dart';
-import 'package:be_smart_app/view/widget/list_progress.dart';
+import 'package:be_smart_app/util/widget/list_progress.dart';
 import 'package:flutter/material.dart';
 
 class MyProgressScreen extends StatelessWidget {
@@ -14,11 +14,14 @@ class MyProgressScreen extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
         child: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
                 'Active Progress',
                 style: TextStyle(fontWeight: semiBold, fontSize: 20),
+              ),
+              const SizedBox(
+                height: 20,
               ),
               const ListProgress()
             ],

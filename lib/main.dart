@@ -1,4 +1,4 @@
-import 'package:be_smart_app/view/screens/on_boarding/on_boarding.dart';
+import 'package:be_smart_app/presentation/page/on_boarding/on_boarding.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';

@@ -1,7 +1,9 @@
-import 'package:be_smart_app/view/screens/account/account_screen.dart';
-import 'package:be_smart_app/view/screens/home_screen/home_screen_widget.dart';
-import 'package:be_smart_app/view/screens/my_progress/my_progress_screen.dart';
 import 'package:flutter/material.dart';
+
+import '../account/account_screen.dart';
+import '../my_progress/my_progress_screen.dart';
+import '../notification/notification_page.dart';
+import 'home_screen_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -104,7 +106,10 @@ class _HomeScreenState extends State<HomeScreen> {
       case 1:
         return const MyProgressScreen();
       case 2:
+        return const NotificationPage();
+      case 3:
         return const AccountScreen();
+
       // return const ListProgress();
     }
     return null;
@@ -141,6 +146,10 @@ class _HomeScreenState extends State<HomeScreen> {
             BottomNavigationBarItem(
               icon: Icon(Icons.playlist_add_check_circle),
               label: 'My Progress',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.notifications_active),
+              label: 'Notification',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.account_circle),

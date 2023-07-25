@@ -1,15 +1,15 @@
 import 'package:be_smart_app/util/theme.dart';
-import 'package:be_smart_app/view/widget/list_progress.dart';
+import 'package:be_smart_app/util/widget/list_progress.dart';
 import 'package:flutter/material.dart';
 
-class LanguagesMaterialListScreen extends StatelessWidget {
-  const LanguagesMaterialListScreen({super.key});
+class UiUxMaterialListScreen extends StatelessWidget {
+  const UiUxMaterialListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('List Materi Bahasa'),
+        title: const Text('List Materi UI/UX'),
         centerTitle: true,
       ),
       body: SizedBox(
