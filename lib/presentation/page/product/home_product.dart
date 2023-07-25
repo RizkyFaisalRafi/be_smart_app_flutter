@@ -15,7 +15,7 @@ class HomeProduct extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               child: SafeArea(
                 // Custom SearchBar
                 child: Row(
@@ -238,7 +238,7 @@ class HomeProduct extends StatelessWidget {
                           //       builder: (context) => DetailPage()),
                           // );
                         },
-                        child: ProductList(
+                        child: const ProductList(
                           'assets/images/product_one.png',
                           'Nike Air Force X',
                           'assets/images/star.png',
@@ -254,7 +254,7 @@ class HomeProduct extends StatelessWidget {
                           //       builder: (context) => DetailPage2()),
                           // );
                         },
-                        child: ProductList(
+                        child: const ProductList(
                           'assets/images/product_one.png',
                           'Nike Air Force X',
                           'assets/images/star.png',
@@ -278,7 +278,7 @@ class HomeProduct extends StatelessWidget {
                           //       builder: (context) => DetailPage3()),
                           // );
                         },
-                        child: ProductList(
+                        child: const ProductList(
                           'assets/images/product_one.png',
                           'Nike Air Force X',
                           'assets/images/star.png',
@@ -294,7 +294,7 @@ class HomeProduct extends StatelessWidget {
                           //       builder: (context) => DetailPage4()),
                           // );
                         },
-                        child: ProductList(
+                        child: const ProductList(
                           'assets/images/product_one.png',
                           'Nike Air Force X',
                           'assets/images/star.png',
@@ -318,7 +318,7 @@ class HomeProduct extends StatelessWidget {
                           //       builder: (context) => DetailPage5()),
                           // );
                         },
-                        child: ProductList(
+                        child: const ProductList(
                           'assets/images/product_one.png',
                           'Nike Air Force X',
                           'assets/images/star.png',
@@ -334,7 +334,7 @@ class HomeProduct extends StatelessWidget {
                           //       builder: (context) => DetailPage6()),
                           // );
                         },
-                        child: ProductList(
+                        child: const ProductList(
                           'assets/images/product_one.png',
                           'Nike Air Force X',
                           'assets/images/star.png',
