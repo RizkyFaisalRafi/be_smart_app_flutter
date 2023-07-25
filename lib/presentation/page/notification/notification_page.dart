@@ -33,7 +33,7 @@ class NotificationPage extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                NotificationStyle(
+                const NotificationStyle(
                   'Order #20181111123 has arrived!',
                   "What you've been waiting for has arrived! Don't forget\nto confirm on the history page!",
                   // 'assets/images/schedule-16px-grey.png',
@@ -42,7 +42,7 @@ class NotificationPage extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                NotificationStyle(
+                const NotificationStyle(
                   'Order #20181111122 has been cancelled',
                   "Your order has been canceled by the system. Chat to\nthe shop owner for more information",
                   // 'assets/images/schedule-16px-grey.png',
@@ -51,7 +51,7 @@ class NotificationPage extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                NotificationStyle(
+                const NotificationStyle(
                   'Order #20181111121 is being processed',
                   "hurray.. the seller is preparing your order wait a little\nlonger, okay?",
                   // 'assets/images/schedule-16px-grey.png',
@@ -60,7 +60,7 @@ class NotificationPage extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                NotificationStyle(
+                const NotificationStyle(
                   'Order #20181111120 waiting for your payment',
                   "let's complete the payment or your order will be\nautomatically canceled by the system in 3 days",
                   // 'assets/images/schedule-16px-grey.png',

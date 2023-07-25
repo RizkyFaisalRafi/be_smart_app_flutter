@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NotificationStyle extends StatelessWidget {
-  String title;
-  String text;
+  final String title;
+  final String text;
   // String imageUrl;
-  String time;
+  final String time;
 
-  NotificationStyle(this.title, this.text, this.time, {super.key});
+  const NotificationStyle(this.title, this.text, this.time, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class NotificationStyle extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.schedule,
                     color: Colors.black,
                     size: 20.0,

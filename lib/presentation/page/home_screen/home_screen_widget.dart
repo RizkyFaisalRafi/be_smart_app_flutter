@@ -124,7 +124,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => HomeProduct()),
+                                        builder: (context) => const HomeProduct()),
                                   );
                                 } else if (index == 1) {
                                   // Navigasi ke Product Pakaian

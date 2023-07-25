@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ProductList extends StatelessWidget {
-  String imageUrl;
-  String nameProduct;
-  String rating;
-  String amount;
-  String price;
+  final String imageUrl;
+  final String nameProduct;
+  final String rating;
+  final String amount;
+  final String price;
 
-  ProductList(
+  const ProductList(
       this.imageUrl, this.nameProduct, this.rating, this.amount, this.price,
       {super.key});
   @override

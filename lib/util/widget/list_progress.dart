@@ -13,7 +13,7 @@ class ListProgress extends StatelessWidget {
       onTap: () => Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => ContentMobileMaterial(),
+          builder: (context) => const ContentMobileMaterial(),
         ),
       ),
       child: Card(
