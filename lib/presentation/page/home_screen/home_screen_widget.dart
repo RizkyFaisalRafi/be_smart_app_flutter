@@ -1,3 +1,4 @@
+import 'package:be_smart_app/presentation/page/see_all/see_all_sevices_page.dart';
 import 'package:be_smart_app/util/theme.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -75,9 +76,6 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                     },
                   ),
                 ),
-                const SizedBox(
-                  height: 8,
-                ),
 
                 buildIndicator(),
 
@@ -86,118 +84,45 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(
-                        height: 8,
-                      ),
-
-                      // Product
-                      const Text(
-                        'Product',
-                        style: TextStyle(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-
-                      // Body Grid Product
-                      Container(
-                        height: 340,
-                        margin: const EdgeInsets.all(4),
-                        // color: Colors.amber,
-                        padding: const EdgeInsets.all(8),
-                        child: GridView.builder(
-                          physics: const NeverScrollableScrollPhysics(),
-                          itemCount: menuItemsProduct.length,
-                          gridDelegate:
-                              const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            childAspectRatio: 1.0,
-                            mainAxisSpacing: 16,
-                            crossAxisSpacing: 16,
+                      // Services
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'Services',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
                           ),
-                          itemBuilder: (BuildContext context, int index) {
-                            return InkWell(
-                              onTap: () {
-                                if (index == 0) {
-                                  // Navigasi ke Product Electronic & Aksesoris
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => const HomeProduct()),
-                                  );
-                                } else if (index == 1) {
-                                  // Navigasi ke Product Pakaian
-                                } else if (index == 2) {
-                                  // Navigasi ke Product Buku
-                                } else if (index == 3) {
-                                  // Navigasi ke Product Sepatu
-                                }
+                          SizedBox(
+                            height: 35,
+                            child: TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => SeeAllServicesPage(),
+                                  ),
+                                );
                               },
-                              child: Card(
-                                elevation: 4.0,
-                                color: Colors.black,
-                                // margin: const EdgeInsets.all(20),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image.asset(
-                                      index == 0
-                                          ? 'assets/images/be_smart_logo.png'
-                                          : index == 1
-                                              ? 'assets/images/be_smart_logo.png'
-                                              : index == 2
-                                                  ? 'assets/images/be_smart_logo.png'
-                                                  : index == 3
-                                                      ? 'assets/images/be_smart_logo.png'
-                                                      : 'assets/images/be_smart_logo.png',
-                                      width: 110,
-                                      height: 110,
-                                    ),
-                                    Expanded(
-                                      child: Container(
-                                        alignment: Alignment.bottomCenter,
-                                        decoration: const BoxDecoration(
-                                          color: Colors.blue,
-                                          borderRadius: BorderRadius.only(
-                                            bottomLeft: Radius.circular(10),
-                                            bottomRight: Radius.circular(10),
-                                          ),
-                                        ),
-                                        child: Center(
-                                          child: Text(
-                                            menuItemsProduct[index],
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: bold,
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                              child: Text(
+                                'See All',
+                                style: GoogleFonts.poppins(
+                                  fontWeight: bold,
+                                  color: Colors.black,
+                                  fontSize: 16,
                                 ),
                               ),
-                            );
-                          },
-                        ),
-                      ),
-
-                      // Services
-                      const Text(
-                        'Services',
-                        style: TextStyle(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
+                            ),
+                          )
+                        ],
                       ),
 
                       // Body Grid Services
                       Container(
-                        height: 340,
+                        height: 380,
                         margin: const EdgeInsets.all(4),
                         // color: Colors.amber,
                         padding: const EdgeInsets.all(8),
@@ -365,8 +290,8 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                                   : index == 3
                                                       ? 'assets/images/be_smart_logo.png'
                                                       : 'assets/images/be_smart_logo.png',
-                                      width: 110,
-                                      height: 110,
+                                      width: 125,
+                                      height: 125,
                                     ),
                                     Expanded(
                                       child: Container(
@@ -399,6 +324,102 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                         ),
                       ),
 
+                      // Product
+                      const Text(
+                        'Product',
+                        style: TextStyle(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+
+                      // Body Grid Product
+                      Container(
+                        height: 380,
+                        margin: const EdgeInsets.all(4),
+                        // color: Colors.amber,
+                        padding: const EdgeInsets.all(8),
+                        child: GridView.builder(
+                          physics: const NeverScrollableScrollPhysics(),
+                          itemCount: menuItemsProduct.length,
+                          gridDelegate:
+                              const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            childAspectRatio: 1.0,
+                            mainAxisSpacing: 16,
+                            crossAxisSpacing: 16,
+                          ),
+                          itemBuilder: (BuildContext context, int index) {
+                            return InkWell(
+                              onTap: () {
+                                if (index == 0) {
+                                  // Navigasi ke Product Electronic & Aksesoris
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const HomeProduct()),
+                                  );
+                                } else if (index == 1) {
+                                  // Navigasi ke Product Pakaian
+                                } else if (index == 2) {
+                                  // Navigasi ke Product Buku
+                                } else if (index == 3) {
+                                  // Navigasi ke Product Sepatu
+                                }
+                              },
+                              child: Card(
+                                elevation: 4.0,
+                                color: Colors.black,
+                                // margin: const EdgeInsets.all(20),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      index == 0
+                                          ? 'assets/images/be_smart_logo.png'
+                                          : index == 1
+                                              ? 'assets/images/be_smart_logo.png'
+                                              : index == 2
+                                                  ? 'assets/images/be_smart_logo.png'
+                                                  : index == 3
+                                                      ? 'assets/images/be_smart_logo.png'
+                                                      : 'assets/images/be_smart_logo.png',
+                                      width: 125,
+                                      height: 125,
+                                    ),
+                                    Expanded(
+                                      child: Container(
+                                        alignment: Alignment.bottomCenter,
+                                        decoration: const BoxDecoration(
+                                          color: Colors.blue,
+                                          borderRadius: BorderRadius.only(
+                                            bottomLeft: Radius.circular(10),
+                                            bottomRight: Radius.circular(10),
+                                          ),
+                                        ),
+                                        child: Center(
+                                          child: Text(
+                                            menuItemsProduct[index],
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              fontWeight: bold,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+
                       // Courses
                       const Text(
                         'Courses',
@@ -411,7 +432,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
 
                       // Body Grid Courses
                       Container(
-                        height: 320,
+                        height: 380,
                         margin: const EdgeInsets.all(4),
                         // color: Colors.amber,
                         padding: const EdgeInsets.all(8),
@@ -483,8 +504,8 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                                   : index == 3
                                                       ? 'assets/images/be_smart_logo.png'
                                                       : 'assets/images/be_smart_logo.png',
-                                      width: 110,
-                                      height: 110,
+                                      width: 125,
+                                      height: 125,
                                     ),
                                     Expanded(
                                       child: Container(
